@@ -121,6 +121,13 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	}
 	
 	private void preOrderRecurse(BSTNode<T> node) {
+		if(node == null)
+			return;
+		else {
+			System.out.print(node + " ");
+			preOrderRecurse(node.leftChild);
+			preOrderRecurse(node.rightChild);
+		}
 		
 	}
 	
